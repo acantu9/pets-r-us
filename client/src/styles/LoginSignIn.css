@@ -1,0 +1,49 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+    background: rgba(0,0,0,0.5) url('../images/signin-login-img.jpg');
+    background-size: cover;
+    background-blend-mode: darken;
+    font-family: 'Poppins', sans-serif;
+}
+
+form{
+    width: 40%;
+    padding: 50px;
+    border-radius: 20px;
+    margin-top: 150px;
+    background-color: white;
+}
+
+.btn-primary{
+    width: 100%;
+    border: none;
+    border-radius: 50x;
+}
+
+.form-input{
+    color: rgba(0,0,0,.87);
+    border-bottom-color: rgba(5, 0, 75, 0.42);
+    box-shadow: none !important;
+    border: none;
+    border-bottom: 1px solid;
+    border-radius: 4px 4px 0 0;
+}
+
+
+h4{
+    font-size: 2rem !important;
+    font-weight: 700;
+ }  
+
+@media only screen and (max-width: 600px){
+    form{
+        width: 100% !Important;
+    }
+}
+
