@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 import { useMutation } from '@apollo/client';
 import { ADD_USER } from '../utils/mutations';
-
+import '../styles/LoginSignIn.css';
 import Auth from '../utils/auth';
 
 const Signup = () => {
@@ -39,11 +39,11 @@ const Signup = () => {
   };
 
   return (
-    <main className="">
-      <div className="">
-        <div className="">
-          <h4 className="">Sign Up</h4>
-          <div className="">
+    <main>
+      <div>
+        <div>
+          
+          <div>
             {data ? (
               <p>
                 Signed In{' '}
@@ -51,33 +51,40 @@ const Signup = () => {
               </p>
             ) : (
               
-              <form onSubmit={handleFormSubmit}>
+              <form onSubmit={handleFormSubmit} class="mx-auto">
+                <h4 class="text-center">Sign Up</h4>
+                <div class="mb-3 mt-5">
                 <input
-                  className=""
+                  className="form-input form-control"
                   placeholder="Your username"
                   name="username"
                   type="text"
                   value={formState.name}
                   onChange={handleChange}
                 />
+                </div>
+                <div class="mb-3">
                 <input
-                  className=""
+                  className="form-input form-control"
                   placeholder="Your email"
                   name="email"
                   type="email"
                   value={formState.email}
                   onChange={handleChange}
                 />
+                </div>
+                <div class="mb-3">
                 <input
-                  className=""
+                  className="form-input form-control"
                   placeholder="******"
                   name="password"
                   type="password"
                   value={formState.password}
                   onChange={handleChange}
                 />
+                </div>
                 <button
-                  className=""
+                  className="btn btn-primary mt-5"
                   style={{ cursor: 'pointer' }}
                   type="submit"
                 >
