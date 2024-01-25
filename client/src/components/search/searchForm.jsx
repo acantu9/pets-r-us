@@ -1,7 +1,8 @@
+// SearchForm.jsx
 import React, { useState } from 'react';
 import '../../styles/searchForm.css';
 
-const SearchForm = () => {
+const SearchForm = ({ onSearch }) => {
   const [petType, setPetType] = useState('');
   const [petSize, setPetSize] = useState('');
   const [petBreed, setPetBreed] = useState('');
@@ -9,16 +10,23 @@ const SearchForm = () => {
   const [petGender, setPetGender] = useState('');
   const [petSpayNeuter, setPetSpayNeuter] = useState('');
 
-  const handleFormSubmit = (e) => {
+  const handleFormSubmit = async (e) => {
     e.preventDefault();
-    // Perform search based on the selected options
-    // You can pass the selected options to a search function or make an API call here
-    console.log('Pet Type:', petType);
-    console.log('Pet Size:', petSize);
-    console.log('Pet Breed:', petBreed);
-    console.log('Pet Age:', petAge);
-    console.log('Pet Gender:', petGender);
-    console.log('Is Pet Spay/Neutered?:', petSpayNeuter);
+
+    // Construct API URL with selected options
+    const apiUrl = `https://api.example.com/pets?petType=${petType}&petSize=${petSize}&petBreed=${petBreed}&petAge=${petAge}&petGender=${petGender}&petSpayNeuter=${petSpayNeuter}`;
+
+    try {
+      // Make API call
+      const response = await fetch(apiUrl);
+      const data = await response.json();
+
+      // Pass the fetched data to the parent component (onSearch callback)
+      onSearch(data);
+    } catch (error) {
+      console.error('Error fetching pet data:', error);
+    }
+
     // Reset the form after submission
     setPetType('');
     setPetSize('');
@@ -28,7 +36,6 @@ const SearchForm = () => {
     setPetSpayNeuter('');
   };
 
-  // Define the available pet breeds based on the selected pet type
   let availableBreeds = [];
   if (petType === 'dog') {
     availableBreeds = ['Labrador Retriever', 'Poodle', 'German Shepherd'];
@@ -103,7 +110,9 @@ const SearchForm = () => {
         </select>
       </label>
 
-      <button class="btn btn-primary btn-lg" type="submit">Search</button>
+      <button className="btn btn-primary btn-lg" type="submit">
+        Search
+      </button>
     </form>
   );
 };
