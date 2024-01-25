@@ -1,0 +1,62 @@
+/* Font family and size for the entire document */
+body {
+  font-family: 'Arial', sans-serif;
+  font-size: 16px;
+}
+
+/* Headings styles */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Helvetica', sans-serif;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Paragraph styles */
+p {
+  line-height: 1.6;
+  color: #555;
+}
+
+/* Links styles */
+a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Highlighted text */
+mark {
+  background-color: #ffeeba;
+}
+
+/* Blockquote styles */
+blockquote {
+  border-left: 4px solid #6c757d;
+  margin: 10px 0;
+  padding-left: 15px;
+  color: #555;
+}
+
+/* List styles */
+ul, ol {
+  margin: 0;
+  padding: 0;
+}
+
+/* List item styles */
+li {
+  margin-bottom: 5px;
+}
+
+/* Code and preformatted text styles */
+code, pre {
+  font-family: 'Courier New', monospace;
+  background-color: #f8f9fa;
+  padding: 5px;
+  border: 1px solid #dee2e6;
+  border-radius: 4px;
+  overflow: auto;
+}
