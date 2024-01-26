@@ -6,7 +6,7 @@ const typeDefs = `
         username: String
         email: String
         password: String
-        favorites: [Pet]
+        savedPets: [Pet]
     }
 
     type Auth {
@@ -25,7 +25,7 @@ const typeDefs = `
         image: String
     }
 
-    input InputPet {
+    input SavedInputPet {
       petId: String
       type: String
         breed: String
@@ -43,7 +43,8 @@ const typeDefs = `
     type Mutation {
       login(email: String!, password: String!): Auth
       addUser(username: String!, email: String!, password: String!): Auth
-      savePet(newPet: InputPet): User
+      savePet(newPet: SavedInputPet): User
+      removePet(petId: ID!): User
     } 
 `;
 
