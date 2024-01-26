@@ -38,7 +38,10 @@ const resolvers = {
           const updatedUser = await User.findByIdAndUpdate(
             { _id: context.user._id },
             { $push: { savedPets: newPet }},
-            { new: true }
+            {
+               new: true,
+               runValidators: true, 
+            }
           );
           return updatedUser;
         }
