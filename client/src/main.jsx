@@ -7,6 +7,7 @@ import App from './App.jsx'
 import Signup from './pages/Signup';
 import Login from './pages/Login';
 import Search from './pages/Search';
+import Results from './pages/Results.jsx';
 
 //import './index.css'
 
@@ -26,7 +27,11 @@ const router = createBrowserRouter([
       {
         path: "/Search",
         element: <Search />
-      }
+      },
+      {
+        path: "/Results",
+        element: <Results />
+      },
     ]
   },
 ]);
