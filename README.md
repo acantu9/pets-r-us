@@ -40,7 +40,7 @@ As a potential pet adopter, I want a convenient platform to explore a comprehens
 1. Clone the repository.
 2. Navigate to the project directory.
 3. Install dependencies using `npm install`.
-4. Start the development server using `npm start`.
+4. Start the development server using `npm run develop`.
 
 ## How to Contribute
 1. Fork the repository.
