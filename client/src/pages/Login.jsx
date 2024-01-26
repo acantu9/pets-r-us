@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useMutation } from '@apollo/client';
 import { LOGIN_USER } from '../utils/mutations';
-
+import '../styles/LoginSignIn.css';
 import Auth from '../utils/auth';
 
 const Login = (props) => {
@@ -44,7 +44,7 @@ const Login = (props) => {
     <main>
       <div>
         <div >
-          <h4>Login</h4>
+          
           <div>
             {data ? (
               <p>
@@ -54,10 +54,11 @@ const Login = (props) => {
             ) : (
               <div>
                 <form onSubmit={handleFormSubmit} class="mx-auto">
+                  <h4 class="text-center">Login</h4>
                   <div class="mb-3 mt-5">
                     <label for="email-input" class="form-label">Email:</label>
                     <input
-                      className="form-input"
+                      className="form-input form-control"
                       placeholder=""
                       name="email"
                       type="email"
@@ -68,7 +69,7 @@ const Login = (props) => {
                   <div class="mb-3">
                     <label for="password-input" class="form-label">Password:</label>
                     <input
-                      className="form-input"
+                      className="form-input form-control"
                       placeholder="******"
                       name="password"
                       type="password"
@@ -77,17 +78,18 @@ const Login = (props) => {
                     />  
                   </div>
                   <button
-                    className="btn btn-block btn-primary"
+                    className="btn btn-primary btn-lg mt-5 mb-3"
                     style={{ cursor: 'pointer' }}
                     type="submit"
                   >
                     Login
                   </button>
-                </form>
-                <p class="row">
+                  <p class="row">
                   
                   <Link to="/signup">SignUp Instead!</Link>
                 </p>
+                </form>
+                
               </div>
             )}
 

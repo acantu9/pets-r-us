@@ -24,5 +24,9 @@ export const ADD_USER = gql`
   }
 `;
 
+/*export const SAVE_PET = gql `
+  mutation savePet($pet: SavedPetInput!)
+`
+*/
 
 
