@@ -66,7 +66,7 @@ const Login = (props) => {
                     />  
                   </div>
                   <div class="mb-3">
-                    <label for="password-input" clas="form-label">Password:</label>
+                    <label for="password-input" class="form-label">Password:</label>
                     <input
                       className="form-input"
                       placeholder="******"
