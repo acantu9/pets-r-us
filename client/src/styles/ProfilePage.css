@@ -19,6 +19,7 @@
 
 .card{
     border-style: solid;
+    padding-top: 5%;
 }
 
 
@@ -26,4 +27,6 @@
     background-color: rgb(24, 71, 133);
     border-style: solid;
     border-color: rgb(0, 0, 0);
+    padding-inline-start: 5%; 
+    padding-inline-end: 5%;
 }
