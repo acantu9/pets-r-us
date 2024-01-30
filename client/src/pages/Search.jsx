@@ -1,11 +1,11 @@
 // // Search.jsx
 import { useState, useEffect } from 'react';
-import { useHistory } from 'react-router-dom';
-import SearchForm from './SearchForm';
+import { useNavigate } from 'react-router-dom';
+import SearchForm from '../components/search/searchForm';
 
 const Search = () => {
   const [searchResults, setSearchResults] = useState([]);
-  const history = useHistory();
+  const navigate = useNavigate();
 
   const handleSearch = async (searchQuery) => {
     try {
@@ -20,7 +20,7 @@ const Search = () => {
       // Update the searchResults state with the fetched data
       setSearchResults(data);
 
-      history.push('/Results'); // Navigate to the Results page
+      navigate('/Results'); // Navigate to the Results page
     } catch (error) {
       console.error('Error searching for pets:', error);
     }
