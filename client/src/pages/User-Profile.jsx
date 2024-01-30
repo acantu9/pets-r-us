@@ -21,7 +21,7 @@ function user_profile() {
 return(
 <main>
 {/* User Profile Card */}
-<div class="card mb-3" style= {{maxWidth:"540px", backgroundColor:"#050038", borderstyle: "solid"}}> 
+<div class="card mb-3" style= {{maxWidth:"540px", backgroundColor:"#050038", borderstyle:"solid", borderWidth:"3px", borderColor:"Black"}}> 
   <div class="row g-0">
     <div class="col-md-4">
     <IoPersonCircleOutline size="200px"/>
@@ -29,7 +29,8 @@ return(
     </div>
     <div class="col-md-8">
       <div class="card-body">
-        <h5 class="card-title">User Placeholder</h5>
+        <h4 class="card-type" >Profile</h4>
+        <h5 class="card-user">User Placeholder</h5>
         <p class="card-text"> User email placeholder </p>
       </div>
     </div>

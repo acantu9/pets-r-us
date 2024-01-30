@@ -4,8 +4,11 @@
     box-sizing: border-box;
 }
 
+.card-type{
+    color: white;
+}
 
-.card-title{
+.card-user{
     color: white;
 }
 
@@ -14,7 +17,7 @@
 }
 
 
-.card mb-3{
+.card{
     border-style: solid;
 }
 
@@ -24,6 +27,3 @@
     border-style: solid;
     border-color: rgb(0, 0, 0);
 }
-
-
-  
