@@ -16,6 +16,8 @@ function user_profile() {
     //const donate = 'donate-btn'
     //const quiz = 'take-quiz'
 
+
+
 return(
 <main>
 {/* User Profile Card */}
@@ -35,12 +37,7 @@ return(
 </div>
 {/* Quiz Button */}
 <div> 
-  <a 
-  href="quiz-form-placeholder" 
-  target="_blank"
-  className='quiz-button'> 
-  <Button > Take Quiz! </Button>
-  </a>
+  <Link className='quiz-button btn btn-primary' to="/Search">Find Pet{/**fix link */}</Link>
 </div>
 </main>
 );

@@ -107,7 +107,7 @@ const Signup = () => {
                     />
                   </div>
                   {/* Signup button */}
-                  <Link to="/Search">
+                  <Link to="/User_Profile">
                     <button
                       className="btn btn-primary mt-3 mb-3"
                       style={{ cursor: 'pointer' }}
