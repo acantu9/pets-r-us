@@ -8,6 +8,9 @@
     margin: 0 auto;
     font-size: large;
     font-family: 'Poppins', sans-serif;
+    background-color: white;
+    border-radius: 10px;
+    padding: 25px;
 }
 
 h1 {

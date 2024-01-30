@@ -23,10 +23,41 @@ export const ADD_USER = gql`
     }
   }
 `;
-
-/*export const SAVE_PET = gql `
+/*
+export const SAVE_PET = gql `
   mutation savePet($pet: SavedPetInput!)
-`
-*/
+    savePet(pet: $pet) {
+      username
+      email
+      savedPets {
+        type
+        breed
+        size
+        age
+        gender
+        spay
+        image
+      }
+    }
+`;
+
+export const REMOVE_PET = gql`
+    mutation removePet($bookId: String!) {
+      removePet(petId: $petId) {
+        username
+        email 
+        savedPets {
+          type
+          breed
+          size
+          age
+          gender
+          spay
+          image
+        }
+      }
+    }
+`;*/
+
 
 

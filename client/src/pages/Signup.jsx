@@ -63,54 +63,61 @@ const Signup = () => {
               <p>
                 Signed In{' '}
                 {/* Provide a Link to navigate to the home page */}
-                <Link to="/">Home</Link> 
+                <Link to="/Search">Search</Link> 
               </p>
             ) : (
               // Render the signup form
-              <form onSubmit={handleFormSubmit} class="mx-auto">
-                <h4 class="text-center">Sign Up</h4>
-                <div class="mb-3 mt-5">
-                  {/* Input field for username */}
-                  <input
-                    className="form-input form-control"
-                    placeholder="Your username"
-                    name="username"
-                    type="text"
-                    value={formState.name}
-                    onChange={handleChange}
-                  />
-                </div>
-                <div class="mb-3">
-                  {/* Input field for email */}
-                  <input
-                    className="form-input form-control"
-                    placeholder="Your email"
-                    name="email"
-                    type="email"
-                    value={formState.email}
-                    onChange={handleChange}
-                  />
-                </div>
-                <div class="mb-3">
-                  {/* Input field for password */}
-                  <input
-                    className="form-input form-control"
-                    placeholder="******"
-                    name="password"
-                    type="password"
-                    value={formState.password}
-                    onChange={handleChange}
-                  />
-                </div>
-                {/* Signup button */}
-                <button
-                  className="btn btn-primary mt-5"
-                  style={{ cursor: 'pointer' }}
-                  type="submit"
-                >
-                  SignUp
-                </button>
-              </form>
+              <div className="signup-form">
+                <form onSubmit={handleFormSubmit} className="mx-auto">
+                  <h4 className="text-center">Sign Up</h4>
+                  <div className="mb-3 mt-5">
+                    {/* Input field for username */}
+                    <label for="username-input" className="form-label">Username:</label>
+                    <input
+                      className="form-input form-control"
+                      placeholder="Your username"
+                      name="username"
+                      type="text"
+                      value={formState.name}
+                      onChange={handleChange}
+                    />
+                  </div>
+                  <div className="mb-3">
+                    {/* Input field for email */}
+                    <label for="email-input" className="form-label">Email:</label>
+                    <input
+                      className="form-input form-control"
+                      placeholder="Your email"
+                      name="email"
+                      type="email"
+                      value={formState.email}
+                      onChange={handleChange}
+                    />
+                  </div>
+                  <div className="mb-3">
+                    {/* Input field for password */}
+                    <label for="password-input" className="form-label">Password:</label>
+                    <input
+                      className="form-input form-control"
+                      placeholder="******"
+                      name="password"
+                      type="password"
+                      value={formState.password}
+                      onChange={handleChange}
+                    />
+                  </div>
+                  {/* Signup button */}
+                  <Link to="/Search">
+                    <button
+                      className="btn btn-primary mt-3 mb-3"
+                      style={{ cursor: 'pointer' }}
+                      type="submit"
+                    >
+                      SignUp
+                    </button>
+                  </Link>
+                </form>
+              </div>
             )}
 
             {/* Display error message if there is an error during signup */}

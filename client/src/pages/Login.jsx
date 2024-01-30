@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useMutation } from '@apollo/client';
 import { LOGIN_USER } from '../utils/mutations';
+
 import '../styles/LoginSignIn.css';
 import Auth from '../utils/auth';
 
@@ -35,7 +36,7 @@ const Login = (props) => {
 
     // clear form values
     setFormState({
-      username: '',
+      email: '',
       password: '',
     });
   };
@@ -43,20 +44,19 @@ const Login = (props) => {
   return (
     <main>
       <div>
-        <div >
-          
+        <div>
           <div>
             {data ? (
               <p>
                 Logged In. {' '}
-                <Link to="/">Go to {/**fix link */}</Link>
+                <Link to="/Search">Go to {/**fix link */}</Link>
               </p>
             ) : (
-              <div>
-                <form onSubmit={handleFormSubmit} class="mx-auto">
-                  <h4 class="text-center">Login</h4>
-                  <div class="mb-3 mt-5">
-                    <label for="email-input" class="form-label">Email:</label>
+              <div className="login-form">
+                <form onSubmit={handleFormSubmit} className="mx-auto">
+                  <h4 className="text-center">Login</h4>
+                  <div className="mb-3 mt-5">
+                    <label for="email-input" className="form-label">Email:</label>
                     <input
                       className="form-input form-control"
                       placeholder=""
@@ -66,8 +66,8 @@ const Login = (props) => {
                       onChange={handleChange}
                     />  
                   </div>
-                  <div class="mb-3">
-                    <label for="password-input" class="form-label">Password:</label>
+                  <div className="mb-3">
+                    <label for="password-input" className="form-label">Password:</label>
                     <input
                       className="form-input form-control"
                       placeholder="******"
@@ -77,25 +77,25 @@ const Login = (props) => {
                       onChange={handleChange}
                     />  
                   </div>
-                  <button
-                    className="btn btn-primary btn-lg mt-5 mb-3"
-                    style={{ cursor: 'pointer' }}
-                    type="submit"
-                  >
-                    Login
-                  </button>
+                  <Link to="/Search">
+                    <button
+                      className="btn btn-primary btn-lg mt-5 mb-3"
+                      style={{ cursor: 'pointer' }}
+                      type="submit"
+                    >
+                      Login
+                    </button>
+                  </Link>
                   <p class="row">
-                  
-                  <Link to="/signup">SignUp Instead!</Link>
-                </p>
+                    <Link to="/signup">SignUp Instead!</Link>
+                  </p>
                 </form>
-                
               </div>
             )}
 
             {error && (
               <div className="my-3 p-3 bg-danger text-white">
-                {error.message}
+                Error: Email or Password incorrect. Please try again.
               </div>
             )}
           </div>

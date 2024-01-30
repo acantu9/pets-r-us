@@ -4,8 +4,7 @@
     box-sizing: border-box;
 }
 
-
-body{
+body {
     background: rgba(0,0,0,0.5) url('../images/signin-login-img.jpg');
     background-size: cover;
     background-blend-mode: darken;
@@ -13,31 +12,39 @@ body{
 }
 
 /* LoginSignIn.css */
-
+.login-form,
+.signup-form {
+  background-color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 10px;
+}
 .card {
     max-width: 400px;
     margin: auto;
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
+}
   
-  .card-body {
+.card-body {
     text-align: center;
-  }
+}
   
-  .form-label {
+.form-label {
     font-weight: bold;
-  }
+}
   
-  .form-input {
+.form-input {
     width: 100%;
     padding: 10px;
     margin-bottom: 15px;
     border: 1px solid #ccc;
     border-radius: 5px;
-  }
+}
   
-  .btn-primary {
+.btn-primary {
     background-color: #007bff;
     color: #fff;
     padding: 12px 20px;
@@ -45,22 +52,53 @@ body{
     border-radius: 5px;
     font-size: 16px;
     cursor: pointer;
-  }
+}
   
-  .btn-primary:hover {
+.btn-primary:hover {
     background-color: #0056b3;
-  }
+}
   
-  .row {
+.row {
     margin-top: 10px;
-  }
+}
   
   /* Add more styles as needed */
-  
-
-@media only screen and (max-width: 600px){
-    form{
-        width: 100% !Important;
+@media only screen and (min-width: 200px){
+    .login-form,
+    .signup-form {
+        width: 225px;
     }
 }
 
+@media only screen and (min-width: 300px){
+    .login-form,
+    .signup-form {
+        width: 300px;
+    }
+}
+
+@media only screen and (min-width: 600px){
+    .login-form,
+    .signup-form {
+        transform: translate(-50%, -100%);
+    }
+}
+
+@media only screen and (min-width: 1000px){
+  .login-form, 
+  .signup-form {
+      transform: translate(-50%, -50%);
+      top: 30%;
+      left: 50%;
+  }
+}
+
+@media only screen and (min-width: 1200px){
+  .login-form,
+  .signup-form {
+      transform: translate(-50%, -10%);
+      top: 30%;
+      left: 50%;
+      width: 500px;
+  }
+}

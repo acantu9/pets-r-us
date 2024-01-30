@@ -8,6 +8,7 @@ import Signup from './pages/Signup';
 import Login from './pages/Login';
 import Search from './pages/Search';
 import User_profile from './pages/User-Profile.jsx';
+import Results from './pages/Results.jsx';
 //import './index.css'
 
 const router = createBrowserRouter([
@@ -30,7 +31,11 @@ const router = createBrowserRouter([
       {
         path: "/User_Profile",
         element: <User_profile />
-      }
+      },
+      {
+        path: "/Results",
+        element: <Results />
+      },
     ]
   },
 ]);
