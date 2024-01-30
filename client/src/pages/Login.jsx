@@ -43,7 +43,7 @@ const Login = (props) => {
 
   return (
     <main>
-      <div>
+      <div className='login-container'>
         <div>
           <div>
             {data ? (
@@ -55,8 +55,8 @@ const Login = (props) => {
               <div className="login-form">
                 <form onSubmit={handleFormSubmit} className="mx-auto">
                   <h4 className="text-center">Login</h4>
-                  <div className="mb-3 mt-5">
-                    <label for="email-input" className="form-label">Email:</label>
+                  <div className="mb-3 mt-5 p-3 d-flex justify-content-between align-items-center">
+                    <label htmlFor="email-input" className="form-label">Email:</label>
                     <input
                       className="form-input form-control"
                       placeholder="email"
@@ -67,8 +67,8 @@ const Login = (props) => {
                     />  
                   </div>
 
-                  <div className="mb-3">
-                    <label for="password-input" className="form-label">Password:</label>
+                  <div className="mb-3 p-3 d-flex justify-content-between align-items-center">
+                    <label htmlFor="password-input" className="form-label">Password:</label>
                     <input
                       className="form-input form-control"
                       placeholder="******"
@@ -77,23 +77,26 @@ const Login = (props) => {
                       value={formState.password}
                       onChange={handleChange}
                     />
-                    </div>
-                  <Link to="/User_Profile">
-                    <button
-                      className="btn btn-primary btn-lg mt-5 mb-3"
-                      style={{ cursor: 'pointer' }}
-                      type="submit">
-                      Login
-                    </button>
-                  </Link>
+                  </div>
 
-                  <Link to="/signup">
-                  <button className="btn btn-secondary btn-lg mt-5 mb-3"
-                  style={{cursor: 'pointer' }}
-                  type="submit">                 
-                  Sign Up
-                  </button>
-                  </Link>
+                  <div>
+                    <Link to="/User_Profile">
+                      <button
+                        className="btn btn-primary btn-lg mt-5 mb-3"
+                        style={{ cursor: 'pointer' }}
+                        type="submit">
+                        Login
+                      </button>
+                    </Link>
+
+                    <Link to="/signup">
+                    <button className="btn btn-secondary btn-lg mt-5 mb-3"
+                    style={{cursor: 'pointer' }}
+                    type="submit">                 
+                    Sign Up
+                    </button>
+                    </Link>
+                  </div>
                 </form>
               </div>
             )}

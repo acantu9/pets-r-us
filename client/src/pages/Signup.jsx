@@ -55,7 +55,7 @@ const Signup = () => {
   // Render the Signup component
   return (
     <main>
-      <div>
+      <div className='sign-up-container'>
         <div>
           <div>
             {/* Display success message if user is signed in, otherwise show the signup form */}
@@ -70,7 +70,7 @@ const Signup = () => {
               <div className="signup-form">
                 <form onSubmit={handleFormSubmit} className="mx-auto">
                   <h4 className="text-center">Sign Up</h4>
-                  <div className="mb-3 mt-5">
+                  <div className="mt-5 p-3 d-flex justify-content-between align-items-center">
                     {/* Input field for username */}
                     <label for="username-input" className="form-label">Username:</label>
                     <input
@@ -82,7 +82,7 @@ const Signup = () => {
                       onChange={handleChange}
                     />
                   </div>
-                  <div className="mb-3">
+                  <div className="p-3 d-flex justify-content-between align-items-center">
                     {/* Input field for email */}
                     <label for="email-input" className="form-label">Email:</label>
                     <input
@@ -94,7 +94,7 @@ const Signup = () => {
                       onChange={handleChange}
                     />
                   </div>
-                  <div className="mb-3">
+                  <div className="mb-3 p-3 d-flex justify-content-between align-items-center">
                     {/* Input field for password */}
                     <label for="password-input" className="form-label">Password:</label>
                     <input
