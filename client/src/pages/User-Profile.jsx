@@ -1,22 +1,11 @@
-import { useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
-import { useMutation } from '@apollo/client';
-import { LOGIN_USER } from '../utils/mutations';
+import { Link } from 'react-router-dom';
 import '../styles/ProfilePage.css';
-import Auth from '../utils/auth';
-
 import React from "react";
-import ReactDOM from "react-dom";
-import Button from "react-bootstrap/Button";
 import { IoPersonCircleOutline } from "react-icons/io5";
 
 function user_profile() {
     const user = 'Profile' //Replace with Users profile info
     const favorites = 'favorites-btn' 
-    //const donate = 'donate-btn'
-    //const quiz = 'take-quiz'
-
-
 
 return(
 <main>
@@ -38,7 +27,7 @@ return(
 </div>
 {/* Quiz Button */}
 <div> 
-  <Link className='quiz-button btn btn-primary' to="/Search">Find Pet{/**fix link */}</Link>
+  <Link className='quiz-button btn btn-primary mt-5' to="/Search">Find Pet{/**fix link */}</Link>
 </div>
 </main>
 );
