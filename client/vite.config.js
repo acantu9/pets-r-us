@@ -12,6 +12,11 @@ export default defineConfig({
         target: 'http://localhost:3001',
         secure: false,
         changeOrigin: true,
+      },
+      '/get-animals': {
+        target: 'http://localhost:3001',
+        secure: false,
+        changeOrigin: true,
       }
     }
   }
