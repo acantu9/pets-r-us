@@ -31,8 +31,8 @@ const Search = () => {
   }, [searchResults]);
 
   return (
-    <div>
-      <h1 className="h1 mb-10">Let's Find Your Purrfect Pet!</h1>
+    <div style={{color: "white"}}>
+      <h1 className="h1" style={{borderWidth:"3px", borderColor:"Black", borderStyle:'solid'}} >Let's Find Your Purrfect Pet!</h1>
       <SearchForm onSearch={handleSearch} />
     </div>
   );

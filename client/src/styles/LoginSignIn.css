@@ -20,7 +20,12 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   border-radius: 10px;
+  border-style: solid;
+  border-color: black;
+  color: #ffffff;
+  background-color: #050038;
 }
+
 .card {
     max-width: 400px;
     margin: auto;
@@ -40,7 +45,7 @@ body {
     width: 100%;
     padding: 10px;
     margin-bottom: 15px;
-    border: 1px solid #ccc;
+    border: 1px solid #465dc5;
     border-radius: 5px;
 }
   
