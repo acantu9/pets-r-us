@@ -59,13 +59,14 @@ const Login = (props) => {
                     <label for="email-input" className="form-label">Email:</label>
                     <input
                       className="form-input form-control"
-                      placeholder=""
+                      placeholder="email"
                       name="email"
                       type="email"
                       value={formState.email}
                       onChange={handleChange}
                     />  
                   </div>
+
                   <div className="mb-3">
                     <label for="password-input" className="form-label">Password:</label>
                     <input
@@ -75,20 +76,24 @@ const Login = (props) => {
                       type="password"
                       value={formState.password}
                       onChange={handleChange}
-                    />  
-                  </div>
+                    />
+                    </div>
                   <Link to="/User_Profile">
                     <button
                       className="btn btn-primary btn-lg mt-5 mb-3"
                       style={{ cursor: 'pointer' }}
-                      type="submit"
-                    >
+                      type="submit">
                       Login
                     </button>
                   </Link>
-                  <p class="row">
-                    <Link to="/signup">SignUp Instead!</Link>
-                  </p>
+
+                  <Link to="/signup">
+                  <button className="btn btn-secondary btn-lg mt-5 mb-3"
+                  style={{cursor: 'pointer' }}
+                  type="submit">                 
+                  Sign Up
+                  </button>
+                  </Link>
                 </form>
               </div>
             )}
