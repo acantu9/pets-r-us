@@ -1,0 +1,29 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+.card-title{
+    color: white;
+}
+
+.card-text{
+    color: white;
+}
+
+
+.card mb-3{
+    border-style: solid;
+}
+
+
+.btn-primary{
+    background-color: rgb(24, 71, 133);
+    border-style: solid;
+    border-color: rgb(0, 0, 0);
+}
+
+
+  
