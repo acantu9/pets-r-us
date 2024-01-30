@@ -49,7 +49,7 @@ const Login = (props) => {
             {data ? (
               <p>
                 Logged In. {' '}
-                <Link to="/Search">Go to {/**fix link */}</Link>
+                <Link to="/User_Profile">Go to {/**fix link */}</Link>
               </p>
             ) : (
               <div className="login-form">
@@ -77,7 +77,7 @@ const Login = (props) => {
                       onChange={handleChange}
                     />  
                   </div>
-                  <Link to="/Search">
+                  <Link to="/User_Profile">
                     <button
                       className="btn btn-primary btn-lg mt-5 mb-3"
                       style={{ cursor: 'pointer' }}
